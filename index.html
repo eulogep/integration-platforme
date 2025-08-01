@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiasporaLink – Plateforme d'intégration</title>
+    <!-- Google Fonts for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-uA1M6oRf5pZblYHsPSX1Pr8F14mOwiz33gvhDvSOB0t8TUgc0fXnEDwuzqxCU5x9fVgeKMupO5wDz6OmoKL6ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Chart.js library for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav>
+            <div class="logo">DiasporaLink</div>
+            <ul>
+                <li><a href="#about">Défi</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#market">Marché</a></li>
+                <li><a href="#problems">Problèmes</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#survey">Sondage</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Facilitons l'intégration des Africains en Europe</h1>
+            <p>Guides pratiques, mentors dévoués et une communauté soudée pour réussir votre nouveau départ.</p>
+            <a href="#solution" class="button">Découvrir la plateforme</a>
+        </div>
+    </section>
+
+    <!-- About / Challenge section -->
+    <section id="about">
+        <h2>Le défi de l'intégration</h2>
+        <p>Chaque année, plus de <strong>200&nbsp;000 Africains</strong> arrivent en Europe. La diaspora africaine compte aujourd'hui plus de <strong>2,5&nbsp;millions</strong> de personnes réparties sur tout le continent européen. Ces nouveaux arrivants doivent naviguer des démarches administratives complexes, surmonter la barrière de la langue, trouver un logement et un emploi, et recréer un réseau social à partir de zéro. Le manque d'informations centralisées et fiables rend ces défis encore plus difficiles.</p>
+        <p>Pour illustrer cette réalité, comparez la taille de la diaspora africaine établie à celle des nouveaux arrivants grâce au graphique ci‑dessous.</p>
+        <div class="chart-container">
+            <canvas id="diasporaChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Solution section -->
+    <section id="solution">
+        <h2>Notre solution</h2>
+        <p>DiasporaLink est une plateforme numérique qui centralise les informations essentielles, met en relation les nouveaux arrivants avec des mentors expérimentés et anime une communauté d'entraide. Notre approche est pensée pour évoluer progressivement : commencer simplement, valider le besoin et ajouter des fonctionnalités en fonction des retours utilisateurs.</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Guides pratiques</h3>
+                <p>Des guides pas‑à‑pas détaillés sur les démarches administratives, la recherche de logement et d'emploi, l'accès à la santé ou à l'éducation.</p>
+            </div>
+            <div class="card">
+                <h3>Annuaire géolocalisé</h3>
+                <p>Un répertoire d'organisations, d'associations et de services publics près de chez vous, pour trouver rapidement une aide adaptée.</p>
+            </div>
+            <div class="card">
+                <h3>Mentorat &amp; experts</h3>
+                <p>Un système de mise en relation avec des mentors de la diaspora et des experts (avocats, RH) pour obtenir des conseils personnalisés.</p>
+            </div>
+            <div class="card">
+                <h3>Communauté</h3>
+                <p>Un espace d'entraide où poser vos questions, partager vos expériences et rencontrer d'autres personnes qui vivent la même aventure.</p>
+            </div>
+        </div>
+        <p style="margin-top:2rem;">Découvrez comment notre plateforme vous accompagne à chaque étape de votre intégration. Des premières démarches à la constitution d'un réseau professionnel, nous sommes à vos côtés.</p>
+    </section>
+
+    <!-- Market section -->
+    <section id="market">
+        <h2>Un marché en pleine croissance</h2>
+        <p>Le marché cible de DiasporaLink est composé de plusieurs segments :</p>
+        <ul>
+            <li><strong>Nouveaux arrivants (0‑2&nbsp;ans)</strong> : 400&nbsp;000 personnes</li>
+            <li><strong>Diaspora établie (mentors potentiels)</strong> : 2,1&nbsp;millions de personnes</li>
+            <li><strong>Étudiants africains</strong> : plusieurs dizaines de milliers répartis sur l'Europe</li>
+            <li><strong>Professionnels qualifiés en mobilité</strong></li>
+            <li><strong>Demandeurs d'asile et réfugiés</strong></li>
+        </ul>
+        <p>Les besoins de ces segments varient, mais tous recherchent des informations fiables, du soutien et des opportunités économiques. Notre modèle freemium répond à ces besoins en proposant un accès gratuit aux contenus essentiels et des services premium pour ceux qui souhaitent aller plus loin.</p>
+        <div class="chart-container">
+            <canvas id="marketChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Problems section -->
+    <section id="problems">
+        <h2>Problèmes récurrents en Afrique et au Congo</h2>
+        <p>Les origines de la migration africaine sont profondément ancrées dans des problèmes économiques et sociaux. Voici quelques‑uns des défis majeurs identifiés dans notre étude :</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Insécurité alimentaire</h3>
+                <p>Malgré des terres fertiles, une grande partie de la population souffre de sous‑alimentation. Les pratiques agricoles peu productives et les changements climatiques aggravent cette situation.</p>
+            </div>
+            <div class="card">
+                <h3>Manque d'industrialisation</h3>
+                <p>L'économie africaine dépend encore largement des exportations de matières premières, sans transformation locale, ce qui limite la création de valeur et d'emplois qualifiés.</p>
+            </div>
+            <div class="card">
+                <h3>Accès aux ressources</h3>
+                <p>L'accès à l'eau potable et à l'énergie reste un défi majeur dans de nombreuses régions, freinant le développement et menaçant la santé publique.</p>
+            </div>
+            <div class="card">
+                <h3>Conflits et instabilité</h3>
+                <p>Les conflits armés et l'insécurité mettent à mal la stabilité de certaines régions, provoquant des déplacements massifs et rendant l'investissement risqué.</p>
+            </div>
+        </div>
+        <p style="margin-top:2rem;">Ces problèmes sont au cœur de notre motivation : en facilitant l'intégration des Africains en Europe, nous contribuons à créer des opportunités pour ceux qui fuient ces réalités et souhaitons, à terme, stimuler des initiatives capables de répondre à ces défis sur le continent.</p>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+        <h2>Projets à impact pour l'Afrique</h2>
+        <p>En parallèle de notre plateforme, nous avons identifié des projets rentables susceptibles de traiter les problèmes structurels en Afrique et au Congo. Voici trois initiatives prometteuses :</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Micro‑centrales solaires</h3>
+                <p>Installation de mini‑centrales solaires et distribution de kits énergétiques domestiques dans les zones non reliées au réseau. Modèle économique : vente d'électricité prépayée et location de kits.</p>
+            </div>
+            <div class="card">
+                <h3>Centres de formation agricole</h3>
+                <p>Création de centres formant les agriculteurs aux techniques modernes et distribution de semences et d'équipements améliorés. Modèle économique : vente de formations et de matériel.</p>
+            </div>
+            <div class="card">
+                <h3>Plateforme emploi &amp; formation</h3>
+                <p>Mise en relation des demandeurs d'emploi avec les entreprises locales et offre de formations professionnelles ciblées. Modèle économique : commissions sur les placements et vente de modules de formation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey call to action -->
+    <section id="survey">
+        <h2>Sondage : votre voix compte</h2>
+        <p>Votre retour est essentiel pour construire une plateforme qui vous ressemble. Participez à notre sondage pour nous aider à définir les priorités et les fonctionnalités les plus utiles.</p>
+        <a href="survey.html" class="button">Participer au sondage</a>
+    </section>
+
+    <!-- Audio introduction -->
+    <section id="audio">
+        <h2>Écoutez notre introduction</h2>
+        <p>Nous avons enregistré un message audio pour vous présenter en quelques mots notre vision et nos ambitions.</p>
+        <audio controls>
+            <source src="assets/voice.wav" type="audio/wav">
+            Votre navigateur ne supporte pas la lecture audio.
+        </audio>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DiasporaLink. Tous droits réservés.</p>
+        <p>Des questions&nbsp;? Écrivez‑nous à <a href="mailto:contact@diasporalink.com">contact@diasporalink.com</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
