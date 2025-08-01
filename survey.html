@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sondage – DiasporaLink</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+<header>
+    <nav>
+        <div class="logo">DiasporaLink</div>
+        <ul>
+            <li><a href="index.html#about">Défi</a></li>
+            <li><a href="index.html#solution">Solution</a></li>
+            <li><a href="index.html#market">Marché</a></li>
+            <li><a href="index.html#problems">Problèmes</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#survey">Sondage</a></li>
+        </ul>
+    </nav>
+</header>
+    <main style="margin-top: 90px;" class="flex items-center justify-center p-4">
+<div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl">
+<h1 class="text-3xl font-bold text-center text-blue-700 mb-6">Sondage sur l'Intégration des Africains en Europe</h1>
+<p class="text-center text-gray-600 mb-8">Vos réponses sont précieuses pour le développement d'une plateforme d'aide à l'intégration.</p>
+<form class="space-y-6" id="surveyForm">
+<!-- Section 1: Informations Démographiques et Parcours -->
+<div class="border-b border-gray-200 pb-4">
+<h2 class="text-2xl font-semibold text-gray-800 mb-4">Section 1: Informations Démographiques et Parcours</h2>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2" for="country_origin">1. Quel est votre pays d'origine ?</label>
+<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="country_origin" name="country_origin" placeholder="Ex: Congo, Côte d'Ivoire, Sénégal..." type="text"/>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2" for="country_residence">2. Dans quel pays d'Europe résidez-vous actuellement ?</label>
+<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="country_residence" name="country_residence" placeholder="Ex: France, Belgique, Allemagne..." type="text"/>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">3. Depuis combien de temps résidez-vous en Europe ?</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-radio" name="residence_duration" type="radio" value="&lt;6m"/><span class="ml-2">Moins de 6 mois</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="residence_duration" type="radio" value="6m-1y"/><span class="ml-2">6 mois à 1 an</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="residence_duration" type="radio" value="1-2y"/><span class="ml-2">1 à 2 ans</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="residence_duration" type="radio" value="2-5y"/><span class="ml-2">2 à 5 ans</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="residence_duration" type="radio" value="&gt;5y"/><span class="ml-2">Plus de 5 ans</span></label>
+</div>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">4. Quel est votre statut actuel en Europe ?</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-radio" name="current_status" type="radio" value="student"/><span class="ml-2">Étudiant</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="current_status" type="radio" value="professional"/><span class="ml-2">Professionnel (salarié)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="current_status" type="radio" value="entrepreneur"/><span class="ml-2">Entrepreneur / Travailleur indépendant</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="current_status" type="radio" value="job_seeker"/><span class="ml-2">Demandeur d'emploi</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="current_status" type="radio" value="asylum_seeker"/><span class="ml-2">Demandeur d'asile / Réfugié</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="current_status" type="radio" value="other_status"/><span class="ml-2">Autre (précisez)</span></label>
+<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2" name="other_status_text" placeholder="Si autre, précisez" type="text"/>
+</div>
+</div>
+</div>
+<!-- Section 2: Défis et Besoins d'Intégration -->
+<div class="border-b border-gray-200 pb-4 pt-4">
+<h2 class="text-2xl font-semibold text-gray-800 mb-4">Section 2: Défis et Besoins d'Intégration</h2>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">5. Quelles ont été les principales difficultés que vous avez rencontrées lors de votre arrivée en Europe ? (Sélectionnez toutes les options pertinentes)</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="admin_procedures"/><span class="ml-2">Démarches administratives (visa, titre de séjour, sécurité sociale, etc.)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="housing_search"/><span class="ml-2">Recherche de logement</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="job_diploma"/><span class="ml-2">Recherche d'emploi / Reconnaissance des diplômes</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="language_barrier"/><span class="ml-2">Barrière linguistique</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="cultural_differences"/><span class="ml-2">Différences culturelles / Adaptation sociale</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="social_isolation"/><span class="ml-2">Isolement social / Manque de réseau</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="health_access"/><span class="ml-2">Accès aux services de santé</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="education_access"/><span class="ml-2">Accès à l'éducation (pour vous ou vos enfants)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="discrimination"/><span class="ml-2">Discrimination</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="difficulties" type="checkbox" value="other_difficulty"/><span class="ml-2">Autre (précisez)</span></label>
+<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2" name="other_difficulty_text" placeholder="Si autre, précisez" type="text"/>
+</div>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">6. Sur une échelle de 1 à 5 (1 = pas du tout difficile, 5 = extrêmement difficile), à quel point évalueriez-vous la difficulté des démarches administratives ?</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-radio" name="difficulty_admin" type="radio" value="1"/><span class="ml-2">1</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="difficulty_admin" type="radio" value="2"/><span class="ml-2">2</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="difficulty_admin" type="radio" value="3"/><span class="ml-2">3</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="difficulty_admin" type="radio" value="4"/><span class="ml-2">4</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="difficulty_admin" type="radio" value="5"/><span class="ml-2">5</span></label>
+</div>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">7. Sur une échelle de 1 à 5, à quel point évalueriez-vous la difficulté de trouver des informations fiables et centralisées ?</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-radio" name="difficulty_info" type="radio" value="1"/><span class="ml-2">1</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="difficulty_info" type="radio" value="2"/><span class="ml-2">2</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="difficulty_info" type="radio" value="3"/><span class="ml-2">3</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="difficulty_info" type="radio" value="4"/><span class="ml-2">4</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="difficulty_info" type="radio" value="5"/><span class="ml-2">5</span></label>
+</div>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">8. Quand vous avez eu besoin d'aide ou d'information, vers quelles sources vous êtes-vous tourné(e) en priorité ? (Sélectionnez toutes les options pertinentes)</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-checkbox" name="info_sources" type="checkbox" value="friends_family"/><span class="ml-2">Amis / Famille</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="info_sources" type="checkbox" value="associations"/><span class="ml-2">Associations d'aide aux migrants</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="info_sources" type="checkbox" value="official_websites"/><span class="ml-2">Sites web officiels (gouvernement, ambassades)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="info_sources" type="checkbox" value="social_media"/><span class="ml-2">Réseaux sociaux (Facebook, WhatsApp, LinkedIn)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="info_sources" type="checkbox" value="specialized_advisors"/><span class="ml-2">Avocats / Conseillers spécialisés</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="info_sources" type="checkbox" value="established_diaspora"/><span class="ml-2">Membres de la diaspora déjà établis</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="info_sources" type="checkbox" value="other_source"/><span class="ml-2">Autre (précisez)</span></label>
+<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2" name="other_source_text" placeholder="Si autre, précisez" type="text"/>
+</div>
+</div>
+</div>
+<!-- Section 3: Intérêt pour une Plateforme Numérique -->
+<div class="border-b border-gray-200 pb-4 pt-4">
+<h2 class="text-2xl font-semibold text-gray-800 mb-4">Section 3: Intérêt pour une Plateforme Numérique</h2>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">9. Seriez-vous intéressé(e) par une plateforme numérique offrant les services suivants ? (Sélectionnez toutes les options pertinentes)</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-checkbox" name="platform_services" type="checkbox" value="detailed_guides"/><span class="ml-2">Guides détaillés sur les démarches administratives (logement, emploi, santé, etc.)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="platform_services" type="checkbox" value="geolocated_directory"/><span class="ml-2">Annuaire de ressources géolocalisées (associations, services publics, etc.)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="platform_services" type="checkbox" value="mentor_matching"/><span class="ml-2">Mise en relation avec des mentors expérimentés de la diaspora africaine</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="platform_services" type="checkbox" value="community_forum"/><span class="ml-2">Un forum ou une communauté d'entraide avec d'autres nouveaux arrivants</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="platform_services" type="checkbox" value="webinars_training"/><span class="ml-2">Des webinaires ou formations en ligne sur des sujets clés (reconnaissance de diplômes, recherche d'emploi)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="platform_services" type="checkbox" value="expert_access"/><span class="ml-2">Accès à des experts spécialisés (avocats, conseillers RH)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="platform_services" type="checkbox" value="other_service"/><span class="ml-2">Autre (précisez)</span></label>
+<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2" name="other_service_text" placeholder="Si autre, précisez" type="text"/>
+</div>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">10. Sur une échelle de 1 à 5 (1 = pas du tout utile, 5 = extrêmement utile), à quel point jugeriez-vous utile la mise en relation avec un mentor expérimenté ?</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-radio" name="mentor_utility" type="radio" value="1"/><span class="ml-2">1</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="mentor_utility" type="radio" value="2"/><span class="ml-2">2</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="mentor_utility" type="radio" value="3"/><span class="ml-2">3</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="mentor_utility" type="radio" value="4"/><span class="ml-2">4</span></label>
+<label class="inline-flex items-center ml-4"><input class="form-radio" name="mentor_utility" type="radio" value="5"/><span class="ml-2">5</span></label>
+</div>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">11. Si une telle plateforme existait, quelles fonctionnalités seraient les plus importantes pour vous ? (Classez par ordre d'importance de 1 à 5, 1 étant le plus important)</label>
+<div class="mt-2 space-y-2">
+<div class="flex items-center">
+<select class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-20 mr-4" name="rank_guides">
+<option value="">--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select>
+<span class="text-gray-700">Guides pratiques</span>
+</div>
+<div class="flex items-center">
+<select class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-20 mr-4" name="rank_directory">
+<option value="">--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select>
+<span class="text-gray-700">Annuaire de ressources</span>
+</div>
+<div class="flex items-center">
+<select class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-20 mr-4" name="rank_mentor_matching">
+<option value="">--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select>
+<span class="text-gray-700">Mise en relation avec mentors</span>
+</div>
+<div class="flex items-center">
+<select class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-20 mr-4" name="rank_community">
+<option value="">--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select>
+<span class="text-gray-700">Forum/Communauté</span>
+</div>
+<div class="flex items-center">
+<select class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-20 mr-4" name="rank_webinars">
+<option value="">--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select>
+<span class="text-gray-700">Webinaires/Formations</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Disposition à Payer -->
+<div class="border-b border-gray-200 pb-4 pt-4">
+<h2 class="text-2xl font-semibold text-gray-800 mb-4">Section 4: Disposition à Payer</h2>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">12. La plateforme pourrait proposer un accès gratuit à des informations de base et à la communauté, et des services premium payants. Seriez-vous prêt(e) à payer pour accéder à des services premium tels que : (Sélectionnez toutes les options pertinentes)</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-checkbox" name="willing_to_pay_services" type="checkbox" value="individual_consultations"/><span class="ml-2">Consultations individuelles avec des mentors</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="willing_to_pay_services" type="checkbox" value="expert_access"/><span class="ml-2">Accès à des experts spécialisés (avocats, conseillers)</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="willing_to_pay_services" type="checkbox" value="advanced_guides"/><span class="ml-2">Guides et modèles de documents avancés</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="willing_to_pay_services" type="checkbox" value="exclusive_webinars"/><span class="ml-2">Webinaires exclusifs</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="willing_to_pay_services" type="checkbox" value="personalized_job_support"/><span class="ml-2">Accompagnement personnalisé pour l'emploi</span></label><br/>
+<label class="inline-flex items-center"><input class="form-checkbox" name="willing_to_pay_services" type="checkbox" value="not_willing_to_pay"/><span class="ml-2">Non, je ne suis pas prêt(e) à payer</span></label>
+</div>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2">13. Si vous étiez prêt(e) à payer pour un abonnement mensuel donnant accès à des services premium, quel serait le montant maximum que vous seriez prêt(e) à dépenser par mois ?</label>
+<div class="mt-2">
+<label class="inline-flex items-center"><input class="form-radio" name="monthly_subscription_amount" type="radio" value="&lt;5"/><span class="ml-2">Moins de 5€</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="monthly_subscription_amount" type="radio" value="5-10"/><span class="ml-2">5€ - 10€</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="monthly_subscription_amount" type="radio" value="10-15"/><span class="ml-2">10€ - 15€</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="monthly_subscription_amount" type="radio" value="15-20"/><span class="ml-2">15€ - 20€</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="monthly_subscription_amount" type="radio" value="&gt;20"/><span class="ml-2">Plus de 20€</span></label><br/>
+<label class="inline-flex items-center"><input class="form-radio" name="monthly_subscription_amount" type="radio" value="not_willing_to_pay_subscription"/><span class="ml-2">Je ne suis pas prêt(e) à payer pour un abonnement</span></label>
+</div>
+</div>
+</div>
+<!-- Section 5: Suggestions et Commentaires -->
+<div class="pt-4">
+<h2 class="text-2xl font-semibold text-gray-800 mb-4">Section 5: Suggestions et Commentaires</h2>
+<div class="mb-4">
+<label class="block text-gray-700 text-sm font-bold mb-2" for="suggestions">14. Avez-vous des suggestions ou des commentaires supplémentaires concernant cette plateforme ou les défis d'intégration ?</label>
+<textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="suggestions" name="suggestions" placeholder="Vos commentaires..." rows="4"></textarea>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Soumettre le sondage</button>
+</div>
+</form>
+<div class="mt-6 text-center text-lg font-semibold text-green-600 hidden" id="responseMessage">Merci pour votre participation !</div>
+</div>
+    </main>
+</body>
+</html>
