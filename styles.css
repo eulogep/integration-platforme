@@ -3,6 +3,15 @@
     box-sizing: border-box;
 }
 
+/* Colour palette inspired by African landscapes */
+:root {
+    --dark: #264653;     /* deep teal for text */
+    --primary: #2a9d8f;  /* lush green accent */
+    --secondary: #e9c46a;/* sandy gold highlight */
+    --accent: #e76f51;   /* burnt sienna for buttons and highlights */
+    --light: #f8f8f8;    /* soft off‑white background */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,8 +20,8 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #1f2937; /* dark slate */
-    background-color: #f8fafc; /* very light gray */
+    color: var(--dark);
+    background-color: var(--light);
 }
 
 /* Header and navigation */
@@ -38,7 +47,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #0f4c75;
+    color: var(--accent);
 }
 
 nav ul {
@@ -51,13 +60,13 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #0f4c75;
+    color: var(--dark);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f59e0b;
+    color: var(--accent);
 }
 
 /* Hero section */
@@ -71,6 +80,7 @@ nav ul li a:hover {
     justify-content: center;
     position: relative;
     padding: 0 1rem;
+    transition: background-image 1s ease-in-out;
 }
 
 .hero::before {
@@ -80,7 +90,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 0;
 }
 
@@ -105,7 +115,7 @@ nav ul li a:hover {
 
 .button {
     display: inline-block;
-    background-color: #f59e0b;
+    background-color: var(--accent);
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
@@ -114,8 +124,10 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
+}
+
 .button:hover {
-    background-color: #d97706;
+    background-color: #bf4d31;
 }
 
 /* Section styles */
@@ -128,7 +140,7 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #0f4c75;
+    color: var(--primary);
     font-weight: 600;
     text-align: center;
 }
@@ -173,17 +185,17 @@ section ul li {
     margin-top: 0.5rem;
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
-    color: #0f4c75;
+    color: var(--primary);
 }
 
 .card p {
     font-size: 0.95rem;
-    color: #374151;
+    color: var(--dark);
 }
 
 .icon {
     font-size: 2rem;
-    color: #f59e0b;
+    color: var(--accent);
 }
 
 .chart-container {
@@ -191,6 +203,29 @@ section ul li {
     width: 100%;
     height: 300px;
     margin-top: 2rem;
+}
+
+/* Fade-in animation for scroll reveal */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Contact section */

@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         datasets: [{
           label: 'Nombre de personnes',
           data: [2100000, 400000],
-          backgroundColor: ['#0f4c75', '#f59e0b'],
-          borderColor: ['#0f4c75', '#f59e0b'],
+          backgroundColor: ['#264653', '#e76f51'],
+          borderColor: ['#264653', '#e76f51'],
           borderWidth: 1
         }]
       },
@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         datasets: [{
           label: 'Population estimée',
           data: [400000, 2100000, 50000, 30000, 20000],
-          backgroundColor: ['#f59e0b', '#0f4c75', '#2c7a7b', '#d97706', '#3f51b5'],
+          // Use palette colours for the doughnut segments
+          backgroundColor: ['#e76f51', '#264653', '#2a9d8f', '#e9c46a', '#f4a261'],
           hoverOffset: 4
         }]
       },
@@ -90,4 +91,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Hero background slider – cycle through a set of images
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    const heroImages = [
+      'images/africa_europe_background.png',
+      'images/africa_europe_connection.png',
+      'images/mentorship.png'
+    ];
+    let heroIndex = 0;
+    setInterval(() => {
+      heroIndex = (heroIndex + 1) % heroImages.length;
+      heroSection.style.backgroundImage = `url('${heroImages[heroIndex]}')`;
+    }, 8000);
+  }
+
+  // Intersection Observer to reveal sections on scroll
+  const revealSections = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealSections.forEach(section => {
+    // initially hide all reveal sections
+    section.classList.add('hidden');
+    observer.observe(section);
+  });
 });
