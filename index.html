@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Progress bar to show scroll position -->
+    <div class="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <!-- Preloader displayed until the page fully loads -->
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
     <!-- Navigation bar -->
     <header>
         <nav>
@@ -22,7 +30,9 @@
             <ul>
                 <li><a href="#about">Défi</a></li>
                 <li><a href="#solution">Solution</a></li>
+                <li><a href="#journey">Parcours</a></li>
                 <li><a href="#market">Marché</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
                 <li><a href="#problems">Problèmes</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#survey">Sondage</a></li>
@@ -34,7 +44,8 @@
     <!-- Hero section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Facilitons l'intégration des Africains en Europe</h1>
+            <!-- Typewriter effect placeholder -->
+            <h1><span id="typewriter"></span></h1>
             <p>Guides pratiques, mentors dévoués et une communauté soudée pour réussir votre nouveau départ.</p>
             <a href="#solution" class="button">Découvrir la plateforme</a>
         </div>
@@ -75,6 +86,33 @@
         <p style="margin-top:2rem;">Découvrez comment notre plateforme vous accompagne à chaque étape de votre intégration. Des premières démarches à la constitution d'un réseau professionnel, nous sommes à vos côtés.</p>
     </section>
 
+    <!-- Journey section -->
+    <section id="journey" class="reveal">
+        <h2>Votre parcours d'intégration</h2>
+        <div class="timeline">
+            <div class="timeline-step">
+                <div class="icon"><i class="fas fa-map-signs"></i></div>
+                <h3>Préparation</h3>
+                <p>Se préparer en amont : connaître les démarches essentielles, rassembler les documents et organiser son départ.</p>
+            </div>
+            <div class="timeline-step">
+                <div class="icon"><i class="fas fa-plane-arrival"></i></div>
+                <h3>Arrivée</h3>
+                <p>À votre arrivée : démarches administratives, trouver un logement temporaire et comprendre le système local.</p>
+            </div>
+            <div class="timeline-step">
+                <div class="icon"><i class="fas fa-home"></i></div>
+                <h3>Installation</h3>
+                <p>Se stabiliser : recherche de logement permanent, emploi ou études, apprentissage de la langue et création de réseau.</p>
+            </div>
+            <div class="timeline-step">
+                <div class="icon"><i class="fas fa-people-group"></i></div>
+                <h3>Intégration continue</h3>
+                <p>Épanouissement : participation à la vie sociale, contribution à la communauté et accompagnement des nouveaux arrivants.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Market section -->
     <section id="market" class="reveal">
         <h2>Un marché en pleine croissance</h2>
@@ -95,24 +133,24 @@
     <!-- Problems section -->
     <section id="problems" class="reveal">
         <h2>Problèmes récurrents en Afrique et au Congo</h2>
-        <p>Les origines de la migration africaine sont profondément ancrées dans des problèmes économiques et sociaux. Voici quelques‑uns des défis majeurs identifiés dans notre étude :</p>
-        <div class="cards">
-            <div class="card">
-                <h3>Insécurité alimentaire</h3>
+        <p>Les origines de la migration africaine sont profondément ancrées dans des problèmes économiques et sociaux. Cliquez sur chaque élément pour en savoir plus :</p>
+        <div class="accordion-group">
+            <details class="accordion">
+                <summary>Insécurité alimentaire</summary>
                 <p>Malgré des terres fertiles, une grande partie de la population souffre de sous‑alimentation. Les pratiques agricoles peu productives et les changements climatiques aggravent cette situation.</p>
-            </div>
-            <div class="card">
-                <h3>Manque d'industrialisation</h3>
+            </details>
+            <details class="accordion">
+                <summary>Manque d'industrialisation</summary>
                 <p>L'économie africaine dépend encore largement des exportations de matières premières, sans transformation locale, ce qui limite la création de valeur et d'emplois qualifiés.</p>
-            </div>
-            <div class="card">
-                <h3>Accès aux ressources</h3>
+            </details>
+            <details class="accordion">
+                <summary>Accès aux ressources</summary>
                 <p>L'accès à l'eau potable et à l'énergie reste un défi majeur dans de nombreuses régions, freinant le développement et menaçant la santé publique.</p>
-            </div>
-            <div class="card">
-                <h3>Conflits et instabilité</h3>
+            </details>
+            <details class="accordion">
+                <summary>Conflits et instabilité</summary>
                 <p>Les conflits armés et l'insécurité mettent à mal la stabilité de certaines régions, provoquant des déplacements massifs et rendant l'investissement risqué.</p>
-            </div>
+            </details>
         </div>
         <p style="margin-top:2rem;">Ces problèmes sont au cœur de notre motivation : en facilitant l'intégration des Africains en Europe, nous contribuons à créer des opportunités pour ceux qui fuient ces réalités et souhaitons, à terme, stimuler des initiatives capables de répondre à ces défis sur le continent.</p>
     </section>
@@ -120,20 +158,20 @@
     <!-- Projects section -->
     <section id="projects" class="reveal">
         <h2>Projets à impact pour l'Afrique</h2>
-        <p>En parallèle de notre plateforme, nous avons identifié des projets rentables susceptibles de traiter les problèmes structurels en Afrique et au Congo. Voici trois initiatives prometteuses :</p>
-        <div class="cards">
-            <div class="card">
-                <h3>Micro‑centrales solaires</h3>
+        <p>En parallèle de notre plateforme, nous avons identifié des projets rentables susceptibles de traiter les problèmes structurels en Afrique et au Congo. Cliquez sur chaque initiative pour en savoir plus :</p>
+        <div class="accordion-group">
+            <details class="accordion">
+                <summary>Micro‑centrales solaires</summary>
                 <p>Installation de mini‑centrales solaires et distribution de kits énergétiques domestiques dans les zones non reliées au réseau. Modèle économique : vente d'électricité prépayée et location de kits.</p>
-            </div>
-            <div class="card">
-                <h3>Centres de formation agricole</h3>
+            </details>
+            <details class="accordion">
+                <summary>Centres de formation agricole</summary>
                 <p>Création de centres formant les agriculteurs aux techniques modernes et distribution de semences et d'équipements améliorés. Modèle économique : vente de formations et de matériel.</p>
-            </div>
-            <div class="card">
-                <h3>Plateforme emploi &amp; formation</h3>
+            </details>
+            <details class="accordion">
+                <summary>Plateforme emploi &amp; formation</summary>
                 <p>Mise en relation des demandeurs d'emploi avec les entreprises locales et offre de formations professionnelles ciblées. Modèle économique : commissions sur les placements et vente de modules de formation.</p>
-            </div>
+            </details>
         </div>
     </section>
 
@@ -152,6 +190,21 @@
             <source src="assets/voice.wav" type="audio/wav">
             Votre navigateur ne supporte pas la lecture audio.
         </audio>
+    </section>
+
+    <!-- Testimonials section -->
+    <section id="testimonials" class="reveal">
+        <h2>Témoignages</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p id="testimonial-text"></p>
+                <span id="testimonial-author"></span>
+            </div>
+            <div class="testimonial-controls">
+                <button id="prevTestimonial" aria-label="Témoignage précédent"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextTestimonial" aria-label="Témoignage suivant"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
     </section>
 
     <!-- Contact section -->
